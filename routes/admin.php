@@ -1,8 +1,6 @@
 <?php
 use Illuminate\Support\Facades\Route;
 
-Route::get('/',function(){
-    return 'Hola Mundo';
-
-});
-?>
+Route::get('/', function(){
+    return view ('admin.dashboard');
+}) ->name('dashboard');
