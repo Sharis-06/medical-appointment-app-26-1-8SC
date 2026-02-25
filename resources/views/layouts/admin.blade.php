@@ -14,6 +14,7 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+        {{-- Font Awesome CSS --}}
         <script src="https://kit.fontawesome.com/bf2462bedb.js" crossorigin="anonymous"></script>
 
         <!-- Styles -->
@@ -31,7 +32,6 @@
             
         </div>
 
-       
         @stack('modals')
         @livewireScripts
         <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
