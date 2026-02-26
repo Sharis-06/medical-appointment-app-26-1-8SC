@@ -21,6 +21,8 @@
         {{-- Font Awesome CSS --}}
         <script src="https://kit.fontawesome.com/bf2462bedb.js" crossorigin="anonymous"></script>
 
+        {{-- WireUI --}}
+        <wireui:scripts />
         <!-- Styles -->
         @livewireStyles
     </head>
