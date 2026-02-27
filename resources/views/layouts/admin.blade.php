@@ -21,6 +21,9 @@
         {{-- Font Awesome CSS --}}
         <script src="https://kit.fontawesome.com/bf2462bedb.js" crossorigin="anonymous"></script>
 
+        {{-- SweetAlert2 --}}
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
         {{-- WireUI --}}
         <wireui:scripts />
         <!-- Styles -->
@@ -34,14 +37,26 @@
 
 
         <div class="p-4 sm:ml-64 mt-14">
-            <div class="mt-14">
+            <div class="mt-14 flex items-center justify-between w-ful">
                 @include('layouts.includes.admin.breadcrumb')
+                @isset($action)
+                    <div>
+                        {{$action}}
+                    </div>
+                @endisset
             </div>
             {{$slot}}
             
         </div>
 
         @stack('modals')
+        {{-- Mostrar sweetAlert cuando fucniones y si lo muestra --}}
+        @if (@session('swal'))
+            <script>
+                Swal.fire(@json(session('swal')));
+            </script> 
+        @endif
+
         @livewireScripts
         <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
 
