@@ -31,6 +31,9 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'id_number',
+        'phone',
+        'address',
     ];
 
     /**
@@ -67,3 +70,4 @@ class User extends Authenticatable
         ];
     }
 }
+

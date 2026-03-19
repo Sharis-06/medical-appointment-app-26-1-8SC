@@ -15,6 +15,7 @@ class RoleTable extends DataTableComponent
         $this->setPrimaryKey('id');
     }
 
+    // Definir las columnas de la tabla
     public function columns(): array
     {
         return [

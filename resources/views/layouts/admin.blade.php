@@ -60,5 +60,32 @@
         @livewireScripts
         <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
 
+
+        {{-- Confirmar eliminación --}}
+        <script>
+         //Busca todos los elementos de una clase  
+        forms = document.querySelectorAll('.delete-form');
+        forms.forEach(form => {
+            // Revisa cualquier acción de envío
+            form.addEventListener('submit', function(e) {
+                // Previene el envio del formulario
+                e.preventDefault();
+                Swal.fire({
+                    title: '¿Estás seguro?',
+                    text: 'No podrás revertir eso',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "Sí, eliminar",
+                    cancelButtonText: "Cancelar" 
+                }).then((result) => {
+                    if(result.isConfirmed){
+                        form.submit();
+                    }
+                });
+            });
+        });
+        </script>
     </body>
 </html>
