@@ -37,7 +37,7 @@
 
 
         <div class="p-4 sm:ml-64 mt-14">
-            <div class="mt-14 flex items-center justify-between w-ful">
+            <div class="mt-2 flex items-center justify-between w-ful">
                 @include('layouts.includes.admin.breadcrumb')
                 @isset($action)
                     <div>
