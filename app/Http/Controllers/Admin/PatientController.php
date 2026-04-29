@@ -63,7 +63,7 @@ class PatientController extends Controller
             'family_history'=> 'nullable|string|min:3|max:255',
             'observations' => 'nullable|string|min:3|max:255',
             'emergency_contact_name' => 'nullable|string|min:3|max:255',
-            'emergency_contact_phone' => 'nullable|string|min:10|max:12',
+            'emergency_contact_phone' => ['nullable', 'string', 'min:10', 'max:12', 'regex:/^[0-9]+$/'],
             'emergency_contact_relationship' => 'nullable|string|min:3|max:50',
         ]);
 
